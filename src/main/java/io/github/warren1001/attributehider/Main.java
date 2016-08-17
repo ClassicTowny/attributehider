@@ -64,7 +64,9 @@ public class Main extends JavaPlugin implements Listener {
 					}
 
 				});
-		getServer().getPluginManager().registerEvents(this, this);
+		if (Bukkit.getPluginManager().getPlugin("Shopkeepers") != null) {
+			getServer().getPluginManager().registerEvents(this, this);
+		}
 	}
 	
 	@EventHandler
